@@ -19,26 +19,24 @@
 	<hr />
 	<section>
 		<div class="row">
-			<div class="container center">
-				<div class="col-xs-0 col-md-4 col-lg-4"></div>
-				<div class="col-xs-12 col-md-4 col-lg-4">
-					<h2>Acceso</h2>
-					<div id="login">
-						<form action="login.php" method="post" class="form-horizontal">
-							<div class="form-group">
-							<input type="text" name="username" placeholder="Usuario" class="form-control">
-							</div>
-							<div class="form-group">
-								<input type="password" name="email" placeholder="Contraseña" class="form-control">
-							</div>
-							<div class="form-group">
-								<button type="submit" class="btn btn-primary">Ingresar</button>
-							</div>
-						</form>
-					</div>
+			<div class="col-xs-0 col-md-4 col-lg-4 wrap"></div>
+			<div class="col-xs-12 col-md-4 col-lg-4">
+				<h2>Acceso</h2>
+				<div id="login">
+					<form action="login.php" method="post" class="form-horizontal">
+						<div class="form-group">
+						<input type="text" name="username" placeholder="Usuario" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" name="email" placeholder="Contraseña" class="form-control">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Ingresar</button>
+						</div>
+					</form>
 				</div>
-				<div class="col-xs-0 col-md-4 col-lg-4"></div>
 			</div>
+			<div class="col-xs-0 col-md-4 col-lg-4"></div>
 		</div>
 	</section>
 	<hr />
