@@ -1,11 +1,15 @@
 <?php
 
 session_start();
-unset($_SESSION["start"]);
-unset($_SESSION["message"]);
+if(isset($_SESSION["start"])){
+	unset($_SESSION["start"]);
+}
 
-session_start();
-$_SESSION["message"] == "logout";
+if(isset($_SESSION["message"])){
+	unset($_SESSION["message"]);
+}
+
+$_SESSION["message"] = "logout";
 header("location: index.php");
 
 ?>
