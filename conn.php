@@ -11,6 +11,6 @@ $userDB = "root";
 $passDB  = "";
 $database = "pagadiario";
 
-$conn = new PDO('mysql:host='.$server.';dbname='.$database.'', $userDB, $passDB);
+$conn = new PDO('mysql:host='.$server.';dbname='.$database.'', ''.$userDB.'', ''.$passDB.'');
 
 ?>

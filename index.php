@@ -29,7 +29,7 @@
 						<input type="text" name="username" placeholder="Usuario" class="form-control">
 						</div>
 						<div class="form-group">
-							<input type="password" name="email" placeholder="Contraseña" class="form-control">
+							<input type="password" name="password" placeholder="Contraseña" class="form-control">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary">

@@ -6,6 +6,8 @@
 	@author: LUCHOWEB.COM
 */
 
+session_start();
+
 if(isset($_SESSION["message"])){
 	if($_SESSION["message"] == "errorBD"){
 		echo'
@@ -14,7 +16,7 @@ if(isset($_SESSION["message"])){
 			</div>
 		';
 	}
-	if($_SESSION["message"] == "errorLogin"){
+	if($_SESSION["message"] == "errorPass"){
 		echo'
 			<div id="top" class="alert alert-danger">
 				Contraseña Incorrecta. Intente de nuevo.

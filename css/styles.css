@@ -21,6 +21,9 @@ footer {
 footer p {
 	margin: 0;
 }
+#loading {
+	margin-top: 20%;
+}
 #logo {
 	margin: 1em 0 0.5em 0;
 	max-width: 300px;
