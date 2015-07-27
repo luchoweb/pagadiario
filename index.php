@@ -11,15 +11,16 @@
 </head>
 <!-- Powered by LUCHOWEB.COM -->
 <body>
+	<?php include "messages.php"; ?>
 	<header>
 		<figure>
 			<img src="images/logo.png" id="logo" />
 		</figure>
 	</header>
 	<hr />
-	<section>
+	<section class="container">
 		<div class="row">
-			<div class="col-xs-0 col-md-4 col-lg-4 wrap"></div>
+			<div class="col-xs-0 col-md-4 col-lg-4"></div>
 			<div class="col-xs-12 col-md-4 col-lg-4">
 				<h2>Acceso</h2>
 				<div id="login">
