@@ -9,24 +9,31 @@
 session_start();
 
 if(isset($_SESSION["message"])){
-	if($_SESSION["message"] == "errorBD"){
+	if($_SESSION["message"] == "errorDB"){
 		echo'
 			<div id="top" class="alert alert-danger">
 				Ha ocurrido un error. Intente de nuevo.
 			</div>
 		';
 	}
-	if($_SESSION["message"] == "errorPass"){
+	if($_SESSION["message"] == "errorLogin"){
 		echo'
 			<div id="top" class="alert alert-danger">
-				Contraseña Incorrecta. Intente de nuevo.
+				Datos incorrectos. Intente de nuevo.
 			</div>
 		';
 	}
-	if($_SESSION["message"] == "errorUser"){
+	if($_SESSION["message"] == "logout"){
 		echo'
-			<div id="top" class="alert alert-danger">
-				Usuario Incorrecto. Intente de nuevo.
+			<div id="top" class="alert alert-success">
+				Sesión finalizada. Vuelva pronto.
+			</div>
+		';
+	}
+	if($_SESSION["message"] == "errorEmpty"){
+		echo'
+			<div id="top" class="alert alert-warning">
+				Por favor ingrese su usuario y contraseña.
 			</div>
 		';
 	}

@@ -26,10 +26,10 @@
 				<div id="login">
 					<form action="login.php" method="post" class="form-horizontal">
 						<div class="form-group">
-						<input type="text" name="username" placeholder="Usuario" class="form-control">
+						<input type="text" name="username" placeholder="Usuario" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<input type="password" name="password" placeholder="Contraseña" class="form-control">
+							<input type="password" name="password" placeholder="Contraseña" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary">

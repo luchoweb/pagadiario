@@ -19,34 +19,34 @@
 
 		include "conn.php";
 
-		try {
-			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = "SELECT username, password FROM user WHERE username = ".$username."";
-			$result = $conn->query($sql, PDO::FETCH_ASSOC);
-			echo '<script>alert("'.$result["username"].'");</script>';
-			if($result['username'] != $username){
-				$_SESSION["message"] = "errorUser";
-			    echo '
-			    	<!-- <meta http-equiv="refresh" content="1;url=index.php"> -->
-			    ';
-			}
-			elseif($result['password'] != $password){
-				echo '<script>alert("'.$result["username"].'");</script>';
-				$_SESSION["message"] = "errorPass";
-			    echo '
-			    	<!-- <meta http-equiv="refresh" content="1;url=index.php"> -->
-			    ';
-			}
+		function login(){
+			$_SESSION["start"] = "start";
 			header("location: dashboard.php");
-			$conn = null;
+		}
+
+		try {
+			$e = $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			
+			$r = $conn->query("SELECT username, password FROM user WHERE username = '".$username."'", PDO::FETCH_ASSOC);
+			
+			foreach ($r as $result) {
+				$user= $result["username"];
+				$pass = $result["password"];
+			}
+			if(empty($user)){
+				$_SESSION["message"] = "errorLogin";
+				header("location:index.php");
+			}
+			if($pass != $password){
+				$_SESSION["message"] = "errorLogin";
+			    header("location: index.php");
+			}
+			login();
 		}
 		catch (PDOException $e) {
 		    $_SESSION["message"] = "errorDB";
-		    echo '
-		    	<meta http-equiv="refresh" content="1;url=index.php">
-		    ';
+		    header("location: index.php");
 		}
-
 	?>
 </head>
 <body>
