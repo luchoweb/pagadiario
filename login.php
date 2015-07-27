@@ -19,29 +19,29 @@
 
 		include "conn.php";
 
-		function login(){
-			$_SESSION["start"] = "start";
-			header("location: dashboard.php");
-		}
-
-		try {
-			$e = $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			
-			$r = $conn->query("SELECT username, password FROM user WHERE username = '".$username."'", PDO::FETCH_ASSOC);
+		try {			
+			$r = $conn->query("SELECT * FROM user WHERE username = '".$username."'", PDO::FETCH_ASSOC);
 			
 			foreach ($r as $result) {
 				$user= $result["username"];
 				$pass = $result["password"];
 			}
+
+			echo $user;
+
 			if(empty($user)){
 				$_SESSION["message"] = "errorLogin";
-				header("location:index.php");
+				header("location: index.php");
 			}
-			if($pass != $password){
-				$_SESSION["message"] = "errorLogin";
-			    header("location: index.php");
+
+			if($pass == $password){
+				$_SESSION["start"] = "start";
+				header("location: dashboard.php");
 			}
-			login();
+
+			$_SESSION["message"] = "errorLogin";
+		    //header("location: index.php");
+			
 		}
 		catch (PDOException $e) {
 		    $_SESSION["message"] = "errorDB";
