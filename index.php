@@ -47,8 +47,6 @@
 			&copy; <?php echo date('Y'); ?>
 			<br />
 			<i class="glyphicon glyphicon-headphones"></i> 319 340 6490
-			<br />
-			<i class="glyphicon glyphicon-map-marker"></i> Colombia
 		</p>
 	</footer>
 </body>
