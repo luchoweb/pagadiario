@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<link href="images/favicon.png" rel="shortcut icon" type="image/png" />
-	<meta charsef="utf-8" />
+	<meta charset="utf-8" />
 	<title>PagaDiario</title>
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -16,10 +16,39 @@
 			<img src="images/logo.png" id="logo" />
 		</figure>
 	</header>
-	<section></section>
+	<hr />
+	<section>
+		<div class="row">
+			<div class="container center">
+				<div class="col-xs-0 col-md-4 col-lg-4"></div>
+				<div class="col-xs-12 col-md-4 col-lg-4">
+					<h2>Acceso</h2>
+					<div id="login">
+						<form action="login.php" method="post" class="form-horizontal">
+							<div class="form-group">
+							<input type="text" name="username" placeholder="Usuario" class="form-control">
+							</div>
+							<div class="form-group">
+								<input type="password" name="email" placeholder="Contraseña" class="form-control">
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary">Ingresar</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-0 col-md-4 col-lg-4"></div>
+			</div>
+		</div>
+	</section>
+	<hr />
 	<footer>
 		<p>
-			&copy; 2008-<?php echo date('Y'); ?>
+			&copy; <?php echo date('Y'); ?>
+			<br />
+			<i class="glyphicon glyphicon-headphones"></i> 319 340 6490
+			<br />
+			<i class="glyphicon glyphicon-map-marker"></i> Colombia
 		</p>
 	</footer>
 </body>
