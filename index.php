@@ -31,7 +31,9 @@
 							<input type="password" name="email" placeholder="Contraseña" class="form-control">
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-primary">Ingresar</button>
+							<button type="submit" class="btn btn-primary">
+								<i class="glyphicon glyphicon-log-in"></i> Ingresar
+							</button>
 						</div>
 					</form>
 				</div>
