@@ -8,6 +8,14 @@
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/styles.css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    setTimeout(function() {
+		        $("#top").fadeOut(1500);
+		    },3000);
+		});
+	</script>
 </head>
 <!-- Powered by LUCHOWEB.COM -->
 <body>
