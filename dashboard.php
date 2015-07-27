@@ -25,7 +25,7 @@
 					<strong>Licencia vence</strong>: 01-01-2015
 					<br />
 					<a href="#" class="label label-success"><i class="glyphicon glyphicon-refresh"></i> Renovar licencia</a> 
-					<a href="#" class="label label-danger"><i class="glyphicon glyphicon-log-out"></i> Salir</a>
+					<a href="logout.php" class="label label-danger"><i class="glyphicon glyphicon-log-out"></i> Salir</a>
 				</small>
 			</h3>
 		</article>
