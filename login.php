@@ -28,29 +28,31 @@
 
 			if(empty($pass)){
 				$_SESSION["message"] = "errorLogin";
-		    	header("location: index.php");
+		    	echo '<meta http-equiv="refresh" content="1;url=index.php">';
 			}
 
 			if($pass != $password){
 				$_SESSION["message"] = "errorLogin";
-		    	header("location: index.php");
+		    	echo '<meta http-equiv="refresh" content="1;url=index.php">';
 			}
 
 			if($pass == $password){
 				$_SESSION["start"] = "start";
-				header("location: dashboard.php");
+				echo '<meta http-equiv="refresh" content="1;url=dashboard.php">';
 			}
 			
 		}
 		catch (PDOException $e) {
 		    $_SESSION["message"] = "errorLogin";
-		    header("location: index.php");
+		    echo '<meta http-equiv="refresh" content="1;url=index.php">';
 		}
 	?>
 </head>
 <body>
 	<div id="loading">
 		<img src="images/loading.gif" />
+		<br />
+		Validando...
 	</div>
 </body>
 </html>
