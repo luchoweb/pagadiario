@@ -42,6 +42,7 @@
 			if($pass != $password){
 				$_SESSION["message"] = "errorLogin";
 		    	echo '<meta http-equiv="refresh" content="1;url=index.php">';
+		    	return;
 			}
 
 			if($pass == $password){
