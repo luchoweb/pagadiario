@@ -5,6 +5,13 @@
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<title>Ingresando...</title>
+</head>
+<body>
+	<div id="loading">
+		<img src="images/loading.gif" />
+		<br />
+		Validando...
+	</div>
 	<?php
 		/*
 			Login de usuarios
@@ -29,6 +36,7 @@
 			if(empty($pass)){
 				$_SESSION["message"] = "errorLogin";
 		    	echo '<meta http-equiv="refresh" content="1;url=index.php">';
+		    	return;
 			}
 
 			if($pass != $password){
@@ -43,16 +51,9 @@
 			
 		}
 		catch (PDOException $e) {
-		    $_SESSION["message"] = "errorLogin";
+		    $_SESSION["message"] = "errorDB";
 		    echo '<meta http-equiv="refresh" content="1;url=index.php">';
 		}
 	?>
-</head>
-<body>
-	<div id="loading">
-		<img src="images/loading.gif" />
-		<br />
-		Validando...
-	</div>
 </body>
 </html>

@@ -14,7 +14,7 @@
 		$(document).ready(function() {
 		    setTimeout(function() {
 		        $("#top").fadeOut(1500);
-		    },3000);
+		    },6000);
 		});
 	</script>
 </head>

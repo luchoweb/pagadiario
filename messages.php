@@ -16,6 +16,13 @@ if(isset($_SESSION["message"])){
 			</div>
 		';
 	}
+	if($_SESSION["message"] == "errorDB"){
+		echo'
+			<div id="top" class="alert alert-danger">
+				Ha ocurrido un error. Intente de nuevo.
+			</div>
+		';
+	}
 	if($_SESSION["message"] == "logout"){
 		echo'
 			<div id="top" class="alert alert-success">
