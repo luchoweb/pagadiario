@@ -5,6 +5,4 @@ Esta aplicación es de uso PRIVADO y bajo licencia.
 
 Cordialmente,
 
-Luis Rodriguez
-
-LUCHOWEB.COM
+Luis Rodriguez<br />LUCHOWEB.COM
